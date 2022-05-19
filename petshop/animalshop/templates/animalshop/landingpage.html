@@ -1,0 +1,14 @@
+<h1> This is the landing page of the website</h1>
+{% for x in categories %}
+    <h5> x.name </h5>
+{% empty %}
+    <h5> opps no categories yet </h5>
+{% endfor %}
+
+{% for y in products %}
+    <h5> y.name </h5>
+    <h5> y.price </h5>
+    <h5> y.discount </h5>
+{% empty %}
+    <h5> opps no categories yet </h5>
+{% endfor %}
