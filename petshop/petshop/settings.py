@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from msilib.schema import Media
 from pathlib import Path
+
+from django.conf import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # apps
     'animalshop.apps.AnimalshopConfig',
+    'animalcart.apps.AnimalcartConfig',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIR = BASE_DIR / 'static'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Media
 MEDIA_URL = 'uploads/'
@@ -129,3 +131,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# cart settings
+
+CART_SESSION_ID = 'cart'
