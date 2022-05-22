@@ -46,6 +46,7 @@ header {
     background-color: #fff;
     height: 90px;
     justify-content: space-between;
+    background-color: rgb(218, 215, 215);
 }
 
 header .landing_logo {
@@ -82,10 +83,11 @@ header .landing-navbar a {
     display: block;
     height: 550px;
     width: 100%;
-    background-color: rgb(218, 215, 215);
+    /* background-color: rgb(218, 215, 215); */
 }
 
 .first_section .left_container {
+    float: left;
     margin-left: 170px;
     margin-top: auto;
     margin-bottom: auto;
@@ -107,10 +109,26 @@ header .landing-navbar a {
 
 .first_section .left_container .shop_now_button {
     color: #fff;
+    text-transform: capitalize;
+    font-size: 23px;
     background-color: black;
     height: 40px;
-    width: 120px;
+    width: 150px;
     margin-top: 30px;
+}
+
+.first_section figure {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.first_section figure img {
+    float: left;
+    width: 350px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: 60px;
+   
 }
 
 .second_section {
@@ -118,6 +136,7 @@ header .landing-navbar a {
     height: 650px;
     display: block;
     padding-top: 40px;
+    background-color: rgb(218, 215, 215);
 }
 
 .second_section .card_div {
@@ -136,4 +155,115 @@ header .landing-navbar a {
     margin-top: 20px;
     margin-left: 30px;
     background-color: rgb(218, 215, 215);
+}
+
+
+.second_section .card_div .card figure img {
+    width: 300px;
+    height: 250px;
+}
+
+.third_section {
+    width: 100%;
+    display: block;
+    padding-top: 40px;
+}
+
+.third_section .third_section_header {
+    font-size: 30px;
+    text-align: center;
+}
+
+.third_section .card_div {
+    width: 1000px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third_section .card_div .card {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 30px;
+    /* background-color: rgb(218, 215, 215); */
+}
+
+.third_section .card_div .card figure img {
+    width: 300px;
+    height: 250px;
+}
+
+.third_section .card_div .card .card_wrapper {
+    display: flex;
+    padding-left: 10px;
+    
+}
+
+.third_section .card_div .card .card_wrapper .item_title {
+float: left;
+font-size: 20px;
+margin-top: 10px;
+}
+
+.third_section .card_div .card .card_wrapper .item_price {
+float: left;
+font-size: 20px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.third_section .card_div .card .card_wrapper .add_to_cart_button {
+float: left;
+font-size: 20px;
+color: #fff;
+background-color: black;
+height: 40px;
+width: 120px;
+margin-left: 32px;
+}
+
+.fourth_section {
+    width: 100%;
+    display: inline-block;
+    background-color: rgb(218, 215, 215);
+    margin-top: 220px;
+
+}
+
+.fourth_section .subscribe_header {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 90px;
+    text-align: center;
+
+}
+
+.fourth_section .subscribe_content {
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center
+
+}
+
+.fourth_section .input_field {
+    margin-top: 140px;
+    text-align: center;
+
+}
+
+.fourth_section .input_field .subscribe_email {
+    height: 65px;
+    width: 370px;
+}
+
+.fourth_section .input_field .subscribe_button {
+    font-size: 20px;
+    color: #fff;
+    background-color: black;
+    height: 64px;
+    width: 120px;
+    margin-left: 5px;
+    margin-bottom: 50px;
 }
