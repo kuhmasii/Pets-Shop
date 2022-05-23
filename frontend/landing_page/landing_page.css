@@ -267,3 +267,17 @@ margin-left: 32px;
     margin-left: 5px;
     margin-bottom: 50px;
 }
+
+
+@media screen and (min-width: 1450px) {
+    header .landing_logo {
+        margin-left: 270px;
+    }
+   
+
+    .first_section .left_container {
+        margin-left: 270px;
+       
+    }
+
+}
