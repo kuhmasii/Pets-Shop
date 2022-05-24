@@ -1,0 +1,8 @@
+    <h5> {{ category.name }}</h5>
+    {% if  category.get_products %}
+        {% for prod in category.get_products %}
+            <a href='{{ prod.get_absolute_url }}'><h5> {{ prod.name }} </h5></a>
+        {% endfor %}
+    {% else %}
+    <h5> opps no products for this category yet </h5>
+    {% endif %}
