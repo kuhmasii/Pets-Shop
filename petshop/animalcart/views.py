@@ -6,10 +6,15 @@ from .cart import Cart
 from .forms import CartProductForm
 
 
-def detail_product(request):
+def cart_product(request):
     cart = Cart(request)
+    for _prod in cart:
+        _prod['updating_form'] = CartProductForm(
+            initial={'quantity': _prod['quantity'], 'override': True}
+        )
+
     context = {'cart': cart}
-    return render(request, 'animalshop/detail.html', context)
+    return render(request, 'cart/detail.html', context)
 
 
 @require_POST

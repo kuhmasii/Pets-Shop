@@ -26,9 +26,11 @@ class Cart(object):
         # getting all products objects and adding them to the cart
         all_products = Product.objects.filter(id__in=all_product_ids)
         cart = self.cart.copy()
+        # bringing out products stored in session and query out the real data from db
         for prod in all_products:
             cart[str(prod.id)]['product'] = prod
 
+        # getting the value of a product from database.
         for item in cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
