@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Store</title>
+
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- custom css file link -->
+        <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+    </head>
+    <body>
+            <section class="info_header">
+                <p class="info_header_text">PURA MAX+Refill Bottles (4 bottles)+Trash Bags(4) (restocked!) / FREE 30 DAYS RETURN</p>
+            </section>
+
+            <header class="landing_header_section">
+                <div class="landing_logo">PETSTORE</div>
+
+                <nav class="landing-navbar">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+                {% include 'context_proc.html' %}
+                
+                <div class="landing_header_icon">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                </div>
+            </header>
+
+            <main class="landing_hero">
+            {% block content %}
+            
+            {% endblock content %}
+            </main>
+
+    </body>
+
+</html>
