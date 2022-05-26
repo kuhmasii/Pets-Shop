@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from pickle import TRUE
+from tkinter import N
 
 from django.conf import settings
 
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     # apps
     'animalshop.apps.AnimalshopConfig',
     'animalcart.apps.AnimalcartConfig',
+    'animalorders.apps.AnimalordersConfig',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'animalcart.context_processors.cart_processor'
             ],
         },
     },
@@ -134,5 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # cart settings
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_DOMAIN = None
+SESSION_SAVE_EVERY_REQUEST = True
 CART_SESSION_ID = 'cart'
