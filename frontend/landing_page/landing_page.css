@@ -133,10 +133,10 @@ header .landing-navbar a {
 
 .second_section {
     width: 100%;
-    height: 650px;
+    height: 850px;
     display: block;
     padding-top: 40px;
-    background-color: rgb(218, 215, 215);
+    background-color: rgb(252, 249, 249);
 }
 
 .second_section .card_div {
@@ -151,7 +151,7 @@ header .landing-navbar a {
 .second_section .card_div .card {
     float: left;
     width: 300px;
-    height: 250px;
+    height: 350px;
     margin-top: 20px;
     margin-left: 30px;
     background-color: rgb(218, 215, 215);
@@ -160,13 +160,13 @@ header .landing-navbar a {
 
 .second_section .card_div .card figure img {
     width: 300px;
-    height: 250px;
+    height: 350px;
 }
 
 .third_section {
     width: 100%;
     display: block;
-    padding-top: 40px;
+    padding-top: 90px;
 }
 
 .third_section .third_section_header {
@@ -175,7 +175,7 @@ header .landing-navbar a {
 }
 
 .third_section .card_div {
-    width: 1000px;
+    width: 1100px;
     height: 550px;
     margin-left: auto;
     margin-right: auto;
@@ -185,8 +185,8 @@ header .landing-navbar a {
     float: left;
     width: 300px;
     height: 300px;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 80px;
+    margin-left: 50px;
     /* background-color: rgb(218, 215, 215); */
 }
 
@@ -196,32 +196,33 @@ header .landing-navbar a {
 }
 
 .third_section .card_div .card .card_wrapper {
-    display: flex;
+    display: block;
     padding-left: 10px;
     
 }
 
 .third_section .card_div .card .card_wrapper .item_title {
-float: left;
-font-size: 20px;
-margin-top: 10px;
+    display: block;
+    clear: both;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .third_section .card_div .card .card_wrapper .item_price {
-float: left;
-font-size: 20px;
-margin-left: 10px;
-margin-top: 10px;
+    float: left;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
 }
 
 .third_section .card_div .card .card_wrapper .add_to_cart_button {
-float: left;
-font-size: 20px;
-color: #fff;
-background-color: black;
-height: 40px;
-width: 120px;
-margin-left: 32px;
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    background-color: black;
+    height: 40px;
+    width: 120px;
+    margin-left: 122px;
 }
 
 .fourth_section {
