@@ -142,3 +142,6 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_DOMAIN = None
 SESSION_SAVE_EVERY_REQUEST = True
 CART_SESSION_ID = 'cart'
+
+# emailling
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
