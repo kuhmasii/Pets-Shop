@@ -74,6 +74,30 @@ header .landing-navbar a {
     text-transform: capitalize;
 }
 
+.drop_down{
+    width: 90px;
+    background-color: rgb(218, 215, 215);
+    left: 740px;
+    position: absolute;
+    display: none;
+}
+
+.drop_down.active {
+    display: inline-block;
+}
+
+.drop_down ul {
+    text-decoration: none;
+}
+
+.drop_down ul li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+
 .shop_page_landing_hero {
     background-color: #fff;
     /* display: flex; */
@@ -172,6 +196,9 @@ header .landing-navbar a {
         margin-left: 225px;
     }
    
+    .drop_down {
+        left: 820px;
+    }
 
 
 }
