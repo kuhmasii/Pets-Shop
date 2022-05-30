@@ -16,6 +16,7 @@ class Order(models.Model):
 	postal_code = models.CharField(max_length=20) 
 	updated = models.DateTimeField(auto_now=True)
 	created = models.DateTimeField(auto_now_add=True)
+	transaction_id = models.CharField(max_length=130, blank=True)
 	paid = models.BooleanField(default=False)
 
 	class Meta:

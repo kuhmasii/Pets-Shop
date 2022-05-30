@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from .tasks import order_created
 from .forms import OrderCreateForm
 from .models import OrderItem
@@ -24,8 +24,11 @@ def create_order(request):
                 cart.flush()
                 # lauch ascyn task
                 order_created.delay(order.id)
-                context = {'cart': cart, 'form': form}
-                return render(request, 'animalorders/checkout.html', context)
+
+                # setting the order in current session
+                request.session['order_id'] = order.id
+                # redirecting to payment gateway
+                return redirect(reverse('gateways:gateways-payment'))
 
     context = {'cart': cart, 'form': form}
     return render(request, 'animalorders/checkout.html', context)
