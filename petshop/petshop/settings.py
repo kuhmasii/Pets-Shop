@@ -10,24 +10,24 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import environ
 from pathlib import Path
-from pickle import TRUE
-from tkinter import N
 
-from django.conf import settings
+env = environ.Env(DEBUG=(bool, False))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+environ.Env.read_env(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ldww0fc9p1kl8nt=2a&8(pt84a$m&u8vzqp$14h-iqo#-_t^o^'
+SECRET_KEY=env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=env.str('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'animalshop.apps.AnimalshopConfig',
     'animalcart.apps.AnimalcartConfig',
     'animalorders.apps.AnimalordersConfig',
+    'gateways.apps.GatewaysConfig',
 ]
 
 MIDDLEWARE = [
@@ -143,5 +144,15 @@ SESSION_COOKIE_DOMAIN = None
 SESSION_SAVE_EVERY_REQUEST = True
 CART_SESSION_ID = 'cart'
 
-# emailling
+# emailing
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = env.str('EMAIL_HOST')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
+
+# payment getway
+BRAINTREE_MERCHANT_ID = env.str('BRAINTREE_MERCHANT_ID')
+BRAINTREE_PUBLIC_KEY = env.str('BRAINTREE_PUBLIC_KEY')
+BRAINTREE_PRIVATE_KEY = env.str('BRAINTREE_PRIVATE_KEY')
