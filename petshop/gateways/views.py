@@ -2,12 +2,14 @@ from django.shortcuts import render, redirect
 from .payments import gateway, error
 from django.http import Http404, HttpResponse
 from animalorders.models import Order
+from .tasks import payment_completed
 
 
 def payment_process(request):
     order_id = request.session.get('order_id')
     try:
         order = Order.objects.get(id=1)
+        # order = Order.objects.get(id=order_id)
         total_cost = order.get_total_cost()
         client_token = gateway.client_token.generate()
     except (Order.DoesNotExist, error):
@@ -31,6 +33,8 @@ def payment_process(request):
             # store the unique transaction id
             order.transaction_id = result.transaction.id
             order.save()
+            # launching an asynchronous task
+            payment_completed.delay(order.id)
 
             return redirect('gateways:gateways-completed')
         else:
