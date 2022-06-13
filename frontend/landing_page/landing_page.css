@@ -292,6 +292,42 @@ header .landing-navbar a {
     margin-bottom: 50px;
 }
 
+.footer_section {
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    margin-top: 140px;
+    text-decoration: none;
+    padding-bottom: 140px;
+}
+
+.footer_section .first_footer_card,.second_footer_card,.third_footer_card,.fourth_footer_card {
+    float: left;
+    margin-left: 190px;
+    font-size: 15px;
+}
+
+.footer_section .first_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.footer_section .second_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.footer_section .third_footer_card .socials{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_section .third_section .socials .social_icon,.social_text {
+    float: left;
+}
+
 
 @media screen and (min-width: 1450px) {
     header .landing_logo {
