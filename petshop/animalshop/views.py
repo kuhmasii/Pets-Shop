@@ -19,7 +19,7 @@ def products(request):
     products = Product.objects.all().order_by('-updated')
     context = {'products': products}
 
-    return render(request, 'animalshop/list.html', context)
+    return render(request, 'animalshop/shop_page.html', context)
 
 
 def product_by_cate(request, category_id=None, category_slug=None):

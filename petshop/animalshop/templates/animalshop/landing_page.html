@@ -1,69 +1,66 @@
 {% extends "main.html" %}
 {% load static %}
 
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/landing_page.js' %}" defer></script>
+{% endblock js %}
+
 {% block content %}
+<main class="landing_hero">
     <section class="first_section">
         <div class="left_container">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             <div class="first_section_header">Lorem Ipsum</div>
-            <button class="shop_now_button">SHOP NOW</button>
+            <a href="{% url 'animalshop:animalshop-list' %}">
+                <button class="shop_now_button">SHOP NOW</button>
+            </a>
         </div>
 
         <figure>
-            <img src="{% static 'asset/dog23.jpg' %}" alt="">
+            <img src="{% static '/asset/dog23.jpg' %}" alt="">
         </figure>
     </section>
 
     <section class="second_section">
+
         <div class="card_div">
-            {% for category in categories %}
-
-                <div class="card">
+        {% for category in categories %}
+            <div class="card">
                 <figure>
-                    <a href='{% url "animalshop:animalshop-CL" category.id  category.slug %}'>
-                        <img src="{% static 'asset/dog18.jpg' %}" alt="">
-                    </a>
-                    {{ category.name }}
+                <img src="{% static '/asset/dog1.jpg' %}" alt="{{ category.name }}">
                 </figure>
-                </div>
-            {% empty %}
-                <div class="card">
-                <figure>
-                    <a href='{% url "animalshop:animalshop-CL" category.id  category.slug %}'>
-                        <img src="{% static 'asset/dog18.jpg' %}" alt="">
-                    </a>
-                <h5> Coming soon :) </h5>
-                </figure>
-                </div>
-            {% endfor %}
-
+            </div>
+        {% empty %}
+        <div class="card">
+            <p>Opps! No Categories for Products yet(:</p>
+        </div>
+        {% endfor %}
         </div>
     </section>
 
     <section class="third_section">
         <h2 class="third_section_header">OUR PICKS</h2>
+
         <div class="card_div">
+        {% for product in products %}
             <div class="card">
-                {% for prod in products %}
-                <figure>
-                <a href='{{ prod.get_absolute_url }}'>
-                <img src="{{ prod.image }}" alt="">
-                </a>
-                </figure>
+                <figure><img src="{{ product.image }}" alt="{{ product.name }}"></figure>
                 <div class="card_wrapper">
-                    <p class="item_title">{{ prod.name }}</p>
-                    <div class="item_price">{{ prod.price }}</div>
+                    <p class="item_title">{{ product.name }}</p>
+                    <div class="item_price">${{ product.price }}</div>
+                    <button class="add_to_cart_button">Add to Cart</button>
                 </div>
-                {% empty %}
-                    <figure>
-                    <img src="" alt="COMING SOON"></figure>
-                    <div class="card_wrapper">
-                        <p class="item_title">Coming soon</p>
-                        <div class="item_price">Coming soon</div>
-                        <div class="item_price">Coming soon</div>
-                    </div>
-                {% endfor %} 
             </div>
+        {% empty %}
+            <div class="card">
+                <p>Opps! No Products Available yet(:</p>
+            </div>
+        {% endfor %}
         </div>
     </section>
 
@@ -75,4 +72,6 @@
             <button class="subscribe_button">Subscribe</button>
         </div>
     </section>
+</main>
 {% endblock content %}
+

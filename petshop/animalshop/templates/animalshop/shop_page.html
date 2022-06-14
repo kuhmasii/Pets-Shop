@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/shop_page.css' %}">
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/shop_page.js' %}" defer ></script>
+{% endblock js %}
+
+{% block content %}
+<main class="shop_page_landing_hero">
+    <section class="shop_section">
+        <h2 class="shop_section_header">ALL</h2>
+        <h4 class="shop_section_sub_header">
+            PETSTORE Users' favorites.
+        </h4>
+        
+        <div class="card_div">
+            {% for product in products %}
+            <div class="card">
+                <figure><img src="{{ product.image }}" alt=""></figure>
+                <div class="card_wrapper">
+                    <p class="item_title">{{ product.name }}</p>
+                    <div class="item_price">${{ product.price }}</div>
+                    <button class="add_to_cart_button">Add to Cart</button>
+                </div>
+            </div>
+            {% empty %}
+            <div class="card">
+                <h5>Opps! Product is not yet added :)</h5>
+            </div>
+            {% endfor%}
+        </div>
+    </section>
+
+    <section class="shop_nav_numbers">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href=""></a>
+    </section>
+</main>
+{% endblock content %}
