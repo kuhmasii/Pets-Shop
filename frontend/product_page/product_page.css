@@ -43,12 +43,14 @@ html {
 
 header {
     display: flex;
-    background-color: var(--black);
+    background-color: #fff;
     height: 90px;
     justify-content: space-between;
+    /* background-color: rgb(218, 215, 215); */
+    background-color: var(--black);
 }
 
-header .landing_logo {
+header .product_logo {
     color: #fff;
     font-size: 30px;
     font-weight: 1000;
@@ -57,7 +59,7 @@ header .landing_logo {
     margin-left: 170px;
 }
 
-header .landing-navbar {
+header .product-navbar {
     color: #fff;
     font-size: 23px;
     margin-top: auto;
@@ -68,7 +70,8 @@ header .landing-navbar {
 
 }
 
-header .landing-navbar a {
+header .product-navbar a {
+    /* color: rgb(32, 32, 32); */
     color: #fff;
     text-transform: capitalize;
 }
@@ -97,20 +100,132 @@ header .landing-navbar a {
     font-size: 23px;
 }
 
-
-.feature_page_landing_hero {
+.product_page_landing_hero {
     background-color: #fff;
     /* display: flex; */
+    padding-top: 150px;
 }
 
-.feature_section {
+.product_page_landing_hero .first_section {
+    width: 750px;
+    float: left;
+}
+
+.product_page_landing_hero .first_section figure {
+    margin-left: 170px;
+}
+
+.product_page_landing_hero .first_section figure .product_image {
+    width: 550px;
+    height: 650px;
+}
+
+.product_page_landing_hero .first_section figure .other_product_image {
+    margin-top: 20px;
+}
+
+.product_page_landing_hero .first_section figure .other_product_image .sub_img {
+    width: 122px;
+    height: 120px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.product_page_landing_hero .second_section {
+    float: left;
+    margin-left: 10px;
+    width: 400px;
+}
+
+.product_page_landing_hero .second_section .petstore_header {
+    margin-top: 90px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 150px;
+}
+
+.product_page_landing_hero .second_section .product_header_name {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.product_page_landing_hero .second_section .product_price {
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 160px;
+}
+
+.product_page_landing_hero .second_section .shipping_note {
+    font-size: 13px;
+    clear: both;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.product_page_landing_hero .second_section .shipping_note a {
+    color: red;
+}
+
+.product_page_landing_hero .second_section .product_quantity {
+    font-size: 15px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.product_page_landing_hero .second_section .product_quantity .product_quantity_input {
+    width: 250px;
+    height: 38px;
+    margin-left: 10px;
+    background-color: rgb(216, 216, 216);
+}
+
+
+.product_page_landing_hero .second_section .btn {
+    width: 400px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 900;
+    margin-top: 10px;
+} 
+
+.product_page_landing_hero .second_section .add_to_cart_button {
+    background-color: var(--black);
+    color: #fff;
+
+}
+
+.product_page_landing_hero .second_section .buy_it_now_button {
+    background-color: black;
+    color: #fff;
+}
+
+.product_page_landing_hero .second_section .product_description {
+    margin-top: 80px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.product_page_landing_hero .second_section figure {
+    margin-top: 20px;
+}
+.product_page_landing_hero .second_section .sub_img_aside {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.third_section {
     width: 100%;
     display: block;
     padding-top: 40px;
     clear: both;
 }
 
-.feature_section .feature_section_header {
+.third_section .third_section_header {
     font-size: 35px;
     font-weight: 600;
     text-align: center;
@@ -125,14 +240,14 @@ header .landing-navbar a {
     margin-bottom: 40px;
 } */
 
-.feature_section .card_div {
+.third_section .card_div {
     width: 1100px;
     height: 550px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.feature_section .card_div .card {
+.third_section .card_div .card {
     float: left;
     width: 300px;
     height: 300px;
@@ -141,32 +256,32 @@ header .landing-navbar a {
     /* background-color: rgb(218, 215, 215); */
 }
 
-.feature_section .card_div .card figure img {
+.third_section .card_div .card figure img {
     width: 300px;
     height: 250px;
 }
 
-.feature_section .card_div .card .card_wrapper {
+.third_section .card_div .card .card_wrapper {
     display: block;
     padding-left: 10px;
     
 }
 
-.feature_section .card_div .card .card_wrapper .item_title {
+.third_section .card_div .card .card_wrapper .item_title {
     display: block;
     clear: both;
     font-size: 20px;
     margin-top: 10px;
 }
 
-.feature_section .card_div .card .card_wrapper .item_price {
+.third_section .card_div .card .card_wrapper .item_price {
     float: left;
     font-size: 20px;
     margin-left: 0px;
     margin-top: 10px;
 }
 
-.feature_section .card_div .card .card_wrapper .add_to_cart_button {
+.third_section .card_div .card .card_wrapper .add_to_cart_button {
     float: left;
     font-size: 20px;
     color: #fff;

@@ -46,11 +46,12 @@ header {
     background-color: #fff;
     height: 90px;
     justify-content: space-between;
-    background-color: rgb(218, 215, 215);
+    /* background-color: rgb(218, 215, 215); */
+    background-color: var(--black);
 }
 
 header .cart_logo {
-    color: black;
+    color: #fff;
     font-size: 30px;
     font-weight: 1000;
     margin-top: auto;
@@ -59,7 +60,7 @@ header .cart_logo {
 }
 
 header .cart-navbar {
-    color: black;
+    color: #fff;
     font-size: 23px;
     margin-top: auto;
     margin-bottom: auto;
@@ -70,14 +71,16 @@ header .cart-navbar {
 }
 
 header .cart-navbar a {
-    color: rgb(32, 32, 32);
+    /* color: rgb(32, 32, 32); */
+    color: #fff;
     text-transform: capitalize;
 }
 
 .drop_down{
     width: 90px;
-    background-color: rgb(218, 215, 215);
-    left: 740px;
+    background-color: var(--black);
+    color: #fff;
+    left: 730px;
     position: absolute;
     display: none;
 }
@@ -97,6 +100,7 @@ header .cart-navbar a {
     font-size: 23px;
 }
 
+/* cart section */
 
 .cart_page_landing_hero {
     background-color: #fff;
@@ -122,7 +126,7 @@ header .cart-navbar a {
     margin-left: 300px;
     margin-top: 110px;
 
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .cart_wrapper .cart_wrapper_head {
@@ -144,6 +148,162 @@ hr {
     width: 800px;
     background-color: rgb(61, 42, 42);
     height: 1px;
+    display: hidden;
+    margin-top: 20px;
+}
+
+.cart_wrapper .cart_prod {
+    width: 800px;
+    height: 150px;
+    background-color: var(--black);
+    margin-top: 20px;
+}
+
+.cart_wrapper .cart_prod .cart_prod_img {
+    height: 150px;
+    width: 150px;
+    float: left;
+}
+
+.cart_wrapper .cart_prod .name_and_remove_div {
+    float: left;
+    margin-left: 40px;
+    color: white;
+    width: 300px;
+}
+
+.cart_wrapper .cart_prod .name_and_remove_div .cart_prod_name {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.cart_wrapper .cart_prod .name_and_remove_div .cart_prod_size {
+    font-size: 20px;
+}
+
+.cart_wrapper .cart_prod .name_and_remove_div .remove {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.cart_wrapper .cart_prod .cart_prod_quantity {
+    color: white;
+    font-size: 20px;
+    float: left;
+    margin-top: 60px;
+    margin-left: 15px;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+}
+
+.cart_wrapper .cart_prod .cart_prod_price {
+    color: white;
+    font-size: 20px;
+    float: left;
+    margin-top: 60px;
+    margin-left: 150px;
+}
+
+.cart_wrapper .subtotal_div {
+    font-size: 17px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-left: 510px;
+}
+
+.cart_wrapper .subtotal_div .subtotal {
+    float: left;
+}
+
+.cart_wrapper .subtotal_div .subtotal_price {
+    float: left;
+    margin-left: 140px;
+}
+
+.cart_wrapper .shipping_note {
+    font-size: 15px;
+    clear: both;
+    margin-top: 70px;
+    margin-left: 470px;
+}
+
+.cart_wrapper .update_checkout_button {
+    margin-top: 30px;
+    margin-left: 450px;
+}
+
+.cart_wrapper .update_checkout_button .btn {
+    width: 150px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: 900;
+} 
+
+.cart_wrapper .update_checkout_button .update_cart {
+    background-color: black;
+    color: #fff;
+}
+
+.cart_wrapper .update_checkout_button .checkout_button {
+    background-color: var(--black);
+    color: #fff;
+    margin-left: 20px;
+}
+
+.cart_wrapper .paypal_btn {
+    margin-left: 425px;
+    margin-top: 40px;
+}
+
+.cart_wrapper .paypal_btn .paypal_link {
+    background-color: rgb(237, 239, 240);
+    color: var(--black);
+    width: 350px;
+    height: 70px;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+/* Footer Section */
+
+.footer_section {
+    width: 100%;
+    display: inline-block;
+    background-color: var(--black);
+    color: #fff;
+    margin-top: 240px;
+    text-decoration: none;
+    padding-top: 150px;
+    padding-bottom: 140px;
+}
+
+.footer_section .first_footer_card,.second_footer_card,.third_footer_card,.fourth_footer_card {
+    float: left;
+    margin-left: 190px;
+    font-size: 15px;
+}
+
+.footer_section .first_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer_section .second_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer_section .third_footer_card .socials{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_section .third_section .socials .social_icon,.social_text {
+    float: left;
 }
 
 
