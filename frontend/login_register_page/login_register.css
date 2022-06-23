@@ -50,7 +50,7 @@ header {
     background-color: var(--black);
 }
 
-header .cart_logo {
+header .login_register_logo {
     color: #fff;
     font-size: 30px;
     font-weight: 1000;
@@ -59,7 +59,7 @@ header .cart_logo {
     margin-left: 100px;
 }
 
-header .cart-navbar {
+header .login_register-navbar {
     color: #fff;
     font-size: 23px;
     margin-top: auto;
@@ -70,13 +70,13 @@ header .cart-navbar {
 
 }
 
-header .cart-navbar a {
+header .login_register-navbar a {
     /* color: rgb(32, 32, 32); */
     color: #fff;
     text-transform: capitalize;
 }
 
-header .cart-navbar a:hover {
+header .login_register-navbar a:hover {
     letter-spacing: .1rem;
 }
 
@@ -95,7 +95,6 @@ header .landing_header_icon i {
 header .landing_header_icon i:hover {
     letter-spacing: .1rem;
 }
-
 
 
 
@@ -127,20 +126,13 @@ header .landing_header_icon i:hover {
     letter-spacing: .1rem;
 }
 
-/* cart section */
-
-.cart_page_landing_hero {
+.login_register_landing_hero {
     background-color: #fff;
     /* display: flex; */
+    padding-top: 0px;
 }
 
-.cart_section {
-    width: 100%;
-    display: block;
-    clear: both;
-}
-
-.cart_section .cart_section_header {
+.login_register_landing_hero .my_account_header {
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -152,169 +144,101 @@ header .landing_header_icon i:hover {
     padding-bottom: auto;
 }
 
-.cart_wrapper {
-    width: 800px;
-    margin-left: 300px;
-    margin-top: 110px;
-
-    /* background-color: yellow; */
-}
-
-.cart_wrapper .cart_wrapper_head {
-    margin-left: 500px;
-    font-size: 17px;
-}
-
-.cart_wrapper .cart_wrapper_head .quantity {
-    float: left;
-
-}
-
-.cart_wrapper .cart_wrapper_head .total {
-    float: left;
-    margin-left: 150px;
-}
-
-hr {
-    width: 800px;
-    background-color: rgb(61, 42, 42);
-    height: 1px;
-    display: hidden;
-    margin-top: 20px;
-}
-
-.cart_wrapper .cart_prod {
-    width: 800px;
-    height: 150px;
-    background-color: var(--black);
-    margin-top: 20px;
-}
-
-.cart_wrapper .cart_prod .cart_prod_img {
-    height: 150px;
-    width: 150px;
-    float: left;
-}
-
-.cart_wrapper .cart_prod .name_and_remove_div {
-    float: left;
-    margin-left: 40px;
-    color: white;
-    width: 300px;
-}
-
-.cart_wrapper .cart_prod .name_and_remove_div .cart_prod_name {
-    font-size: 20px;
-    margin-top: 40px;
-}
-
-.cart_wrapper .cart_prod .name_and_remove_div .cart_prod_size {
-    font-size: 20px;
-}
-
-.cart_wrapper .cart_prod .name_and_remove_div .remove {
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.cart_wrapper .cart_prod .cart_prod_quantity {
-    color: white;
-    font-size: 20px;
-    float: left;
-    margin-top: 60px;
-    margin-left: 15px;
-    width: 60px;
-    height: 40px;
-    text-align: center;
-}
-
-.cart_wrapper .cart_prod .cart_prod_price {
-    color: white;
-    font-size: 20px;
-    float: left;
-    margin-top: 60px;
-    margin-left: 150px;
-}
-
-.cart_wrapper .subtotal_div {
-    font-size: 17px;
-    font-weight: 900;
-    margin-top: 20px;
-    margin-left: 510px;
-}
-
-.cart_wrapper .subtotal_div .subtotal {
-    float: left;
-}
-
-.cart_wrapper .subtotal_div .subtotal_price {
-    float: left;
-    margin-left: 140px;
-}
-
-.cart_wrapper .shipping_note {
-    font-size: 15px;
-    clear: both;
+.login_register_landing_hero .first_section {
     margin-top: 70px;
-    margin-left: 470px;
+    margin-left: 75px;
+    width: 580px;
+    height: 800px;
+    float: left;
+    /* background-color: black; */
 }
 
-.cart_wrapper .update_checkout_button {
-    margin-top: 30px;
-    margin-left: 450px;
+.login_register_landing_hero .second_section {
+    margin-top: 70px;
+    margin-right: 75px;
+    width: 580px;
+    height: 800px;
+    float: left;
+    margin-left: 30px;
+    /* background-color: #27ae60; */
 }
 
-.cart_wrapper .update_checkout_button .btn {
-    width: 150px;
-    height: 60px;
-    font-size: 17px;
-    font-weight: 900;
-    /* padding: 12px 20px; */
-} 
+.login_register_landing_hero .head_text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
 
-.cart_wrapper .update_checkout_button .btn:hover {
+.login_register_landing_hero .label {
+    font-size: 15px;
+    color: rgb(156, 156, 156);
+    padding-bottom: 50px;
+}
+
+.login_register_landing_hero .label span {
+    color: rgb(203, 68, 68);
+}
+
+.login_register_landing_hero .input {
+    width: 580px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: #000000;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.login_register_landing_hero .forget_password {
+    font-size: 15px;
+    color: rgb(103, 101, 101);
+    margin-bottom: 20px;
+}
+
+.login_register_landing_hero .forget_password:hover {
     letter-spacing: .1rem;
 }
 
-.cart_wrapper .update_checkout_button .update_cart {
-    background-color: black;
-    color: #fff;
+.login_register_landing_hero .btn {
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid;
+    background-color: #fff;
+    border-radius: 50px;
+    border-color: #000000;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    opacity: 0.8;
+    /* margin-top: 20px;
+    margin-bottom: 40px; */
 }
 
-.cart_wrapper .update_checkout_button .checkout_button {
-    background-color: var(--black);
-    color: #fff;
-    margin-left: 20px;
-}
-
-.cart_wrapper .paypal_btn {
-    margin-left: 425px;
-    margin-top: 40px;
-}
-
-
-.cart_wrapper .paypal_btn .paypal_link {
-    background-color: rgb(237, 239, 240);
-    color: var(--black);
-    width: 350px;
-    height: 70px;
-    font-size: 17px;
-    font-weight: 900;
-}
-
-.cart_wrapper .paypal_btn .paypal_link:hover {
+.login_register_landing_hero .btn:hover {
     letter-spacing: .1rem;
 }
 
-/* Footer Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer_section {
     width: 100%;
     display: inline-block;
     background-color: var(--black);
     color: #fff;
-    margin-top: 240px;
+    margin-top: 40px;
     text-decoration: none;
     padding-top: 150px;
     padding-bottom: 140px;
@@ -346,7 +270,6 @@ hr {
 .footer_section .third_section .socials .social_icon,.social_text {
     float: left;
 }
-
 
 @media screen and (min-width: 1450px) {
 

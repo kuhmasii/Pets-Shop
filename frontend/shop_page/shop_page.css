@@ -46,20 +46,21 @@ header {
     background-color: #fff;
     height: 90px;
     justify-content: space-between;
-    background-color: rgb(218, 215, 215);
+    /* background-color: rgb(218, 215, 215); */
+    background-color: var(--black);
 }
 
-header .landing_logo {
-    color: black;
+header .shop_page_logo {
+    color: #fff;
     font-size: 30px;
     font-weight: 1000;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 170px;
+    margin-left: 100px;
 }
 
-header .landing-navbar {
-    color: black;
+header .shop_page-navbar {
+    color: #fff;
     font-size: 23px;
     margin-top: auto;
     margin-bottom: auto;
@@ -69,15 +70,40 @@ header .landing-navbar {
 
 }
 
-header .landing-navbar a {
-    color: rgb(32, 32, 32);
+header .shop_page-navbar a {
+    /* color: rgb(32, 32, 32); */
+    color: #fff;
     text-transform: capitalize;
 }
 
+header .shop_page-navbar a:hover {
+    letter-spacing: .1rem;
+}
+
+header .landing_header_icon {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+    /* background-color: #000000; */
+    margin-right: 130px;
+}
+
+header .landing_header_icon i {
+    margin-right: 30px;
+}
+
+header .landing_header_icon i:hover {
+    letter-spacing: .1rem;
+}
+
+
+
+
 .drop_down{
     width: 90px;
-    background-color: rgb(218, 215, 215);
-    left: 740px;
+    background-color: var(--black);
+    color: #fff;
+    left: 601px;
     position: absolute;
     display: none;
 }
@@ -97,6 +123,10 @@ header .landing-navbar a {
     font-size: 23px;
 }
 
+.drop_down ul li:hover {
+    letter-spacing: .1rem;
+}
+
 
 .shop_page_landing_hero {
     background-color: #fff;
@@ -106,15 +136,20 @@ header .landing-navbar a {
 .shop_section {
     width: 100%;
     display: block;
-    padding-top: 40px;
+    padding-top: 0px;
     clear: both;
 }
 
 .shop_section .shop_section_header {
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     text-align: center;
-    margin-top: 70px;
+    background-color: #666;
+    color: #fff;
+    width: 100%;
+    height: 120px;
+    padding-top: 45px;
+    padding-bottom: auto;
 }
 
 .shop_section .shop_section_sub_header {
@@ -122,7 +157,7 @@ header .landing-navbar a {
     font-weight: 100;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .shop_section .card_div {
@@ -170,10 +205,15 @@ header .landing-navbar a {
     float: left;
     font-size: 20px;
     color: #fff;
-    background-color: black;
-    height: 40px;
-    width: 120px;
-    margin-left: 122px;
+    background-color: var(--black);
+    /* height: 40px;
+    width: 120px; */
+    padding: 12px 20px;
+    margin-left: 80px;
+}
+
+.shop_section .card_div .card .card_wrapper .add_to_cart_button:hover {
+    letter-spacing: .1rem;
 }
 
 .shop_nav_numbers {
@@ -190,12 +230,20 @@ header .landing-navbar a {
     margin-left: 30px;
 }
 
+.shop_nav_numbers a:hover {
+  color: red;
+}
+
+/* Footer Section */
+
 .footer_section {
     width: 100%;
     display: inline-block;
-    background-color: #fff;
-    margin-top: 140px;
+    background-color: var(--black);
+    color: #fff;
+    margin-top: 80px;
     text-decoration: none;
+    padding-top: 150px;
     padding-bottom: 140px;
 }
 
@@ -208,13 +256,13 @@ header .landing-navbar a {
 .footer_section .first_footer_card a{
     display: block;
     margin-bottom: 20px;
-    color: black;
+    color: #fff;
 }
 
 .footer_section .second_footer_card a{
     display: block;
     margin-bottom: 20px;
-    color: black;
+    color: #fff;
 }
 
 .footer_section .third_footer_card .socials{
@@ -233,7 +281,7 @@ header .landing-navbar a {
     }
    
     .drop_down {
-        left: 820px;
+        left: 655px;
     }
 
 

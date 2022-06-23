@@ -46,20 +46,21 @@ header {
     background-color: #fff;
     height: 90px;
     justify-content: space-between;
-    background-color: rgb(218, 215, 215);
+    /* background-color: rgb(218, 215, 215); */
+    background-color: var(--black);
 }
 
 header .landing_logo {
-    color: black;
+    color: #fff;
     font-size: 30px;
     font-weight: 1000;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 170px;
+    margin-left: 100px;
 }
 
 header .landing-navbar {
-    color: black;
+    color: #fff;
     font-size: 23px;
     margin-top: auto;
     margin-bottom: auto;
@@ -70,14 +71,39 @@ header .landing-navbar {
 }
 
 header .landing-navbar a {
-    color: rgb(32, 32, 32);
+    /* color: rgb(32, 32, 32); */
+    color: #fff;
     text-transform: capitalize;
 }
 
+header .landing-navbar a:hover {
+    letter-spacing: .1rem;
+}
+
+header .landing_header_icon {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+    /* background-color: #000000; */
+    margin-right: 130px;
+}
+
+header .landing_header_icon i {
+    margin-right: 30px;
+}
+
+header .landing_header_icon i:hover {
+    letter-spacing: .1rem;
+}
+
+
+
+
 .drop_down{
     width: 90px;
-    background-color: rgb(218, 215, 215);
-    left: 750px;
+    background-color: var(--black);
+    color: #fff;
+    left: 601px;
     position: absolute;
     display: none;
 }
@@ -97,6 +123,10 @@ header .landing-navbar a {
     font-size: 23px;
 }
 
+.drop_down ul li:hover {
+    letter-spacing: .1rem;
+}
+
 .landing_hero {
     background-color: #fff;
     /* display: flex; */
@@ -114,7 +144,7 @@ header .landing-navbar a {
     margin-left: 170px;
     margin-top: auto;
     margin-bottom: auto;
-    color: black;
+    color: var(--black);
     padding-top: 150px;
 } 
 
@@ -134,10 +164,15 @@ header .landing-navbar a {
     color: #fff;
     text-transform: capitalize;
     font-size: 23px;
-    background-color: black;
-    height: 40px;
-    width: 150px;
+    background-color: var(--black);
+    /* height: 40px;
+    width: 150px; */
+    padding: 15px 25px;
     margin-top: 30px;
+}
+
+.first_section .left_container .shop_now_button:hover {
+    letter-spacing: .1rem;
 }
 
 .first_section figure {
@@ -149,7 +184,7 @@ header .landing-navbar a {
     float: left;
     width: 350px;
     height: 250px;
-    margin-top: 60px;
+    margin-top: 150px;
     margin-left: 60px;
    
 }
@@ -159,7 +194,7 @@ header .landing-navbar a {
     height: 850px;
     display: block;
     padding-top: 40px;
-    background-color: rgb(252, 249, 249);
+    background-color: var(--black);
 }
 
 .second_section .card_div {
@@ -184,6 +219,10 @@ header .landing-navbar a {
 .second_section .card_div .card figure img {
     width: 300px;
     height: 350px;
+}
+
+.second_section .card_div .card figure img:hover {
+    width: 310px;
 }
 
 .third_section {
@@ -242,10 +281,15 @@ header .landing-navbar a {
     float: left;
     font-size: 20px;
     color: #fff;
-    background-color: black;
-    height: 40px;
-    width: 120px;
-    margin-left: 122px;
+    background-color: var(--black);
+    /* height: 40px;
+    width: 120px; */
+    padding: 12px 20px;
+    margin-left: 80px;
+}
+
+.third_section .card_div .card .card_wrapper .add_to_cart_button:hover {
+    letter-spacing: .1rem;
 }
 
 .fourth_section {
@@ -292,12 +336,16 @@ header .landing-navbar a {
     margin-bottom: 50px;
 }
 
+/* Footer Section */
+
 .footer_section {
     width: 100%;
     display: inline-block;
-    background-color: #fff;
-    margin-top: 140px;
+    background-color: var(--black);
+    color: #fff;
+    margin-top: 0px;
     text-decoration: none;
+    padding-top: 150px;
     padding-bottom: 140px;
 }
 
@@ -310,13 +358,13 @@ header .landing-navbar a {
 .footer_section .first_footer_card a{
     display: block;
     margin-bottom: 20px;
-    color: black;
+    color: #fff;
 }
 
 .footer_section .second_footer_card a{
     display: block;
     margin-bottom: 20px;
-    color: black;
+    color: #fff;
 }
 
 .footer_section .third_footer_card .socials{
@@ -330,9 +378,9 @@ header .landing-navbar a {
 
 
 @media screen and (min-width: 1450px) {
-    header .landing_logo {
+    /* header .landing_logo {
         margin-left: 270px;
-    }
+    } */
    
 
     .first_section .left_container {
@@ -341,7 +389,13 @@ header .landing-navbar a {
     }
 
     .drop_down {
-        left: 850px;
+        left: 655px;
+    }
+
+    .footer_section .first_footer_card,.second_footer_card,.third_footer_card,.fourth_footer_card {
+        float: left;
+        margin-left: 210px;
+        font-size: 15px;
     }
 
 }
