@@ -85,7 +85,7 @@ header .landing_header_icon {
     color: #fff;
     margin-top: 30px;
     /* background-color: #000000; */
-    margin-right: 130px;
+    margin-right: 80px;
 }
 
 header .landing_header_icon i {
@@ -103,7 +103,7 @@ header .landing_header_icon i:hover {
     width: 90px;
     background-color: var(--black);
     color: #fff;
-    left: 601px;
+    left: 565px;
     position: absolute;
     display: none;
 }
@@ -351,7 +351,7 @@ hr {
 @media screen and (min-width: 1450px) {
 
     .drop_down {
-        left: 655px;
+        left: 625px;
     }
    
 }
