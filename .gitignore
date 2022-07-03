@@ -2,6 +2,7 @@
 *.pot
 *.pyc
 .env
+.vscode/
 __pycache__/
 local_settings.py
 db.sqlite3
