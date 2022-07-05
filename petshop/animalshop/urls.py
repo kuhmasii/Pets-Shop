@@ -8,6 +8,6 @@ urlpatterns = [
     path('collections/', views.products, name='animalshop-list'),
     path('<int:category_id>/<slug:category_slug>/',
          views.product_by_cate, name='animalshop-CL'),
-    path('<int:detail_id>/<slug:detail_slug>/',
+    path('product/<int:detail_id>/<slug:detail_slug>/',
          views.detail, name='animalshop-detail'),
 ]

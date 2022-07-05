@@ -121,7 +121,7 @@ class ProductTestcase(TestCase):
         obj = Product.objects.get(pk=1)
 
         self.assertEqual(
-            obj.get_absolute_url(), '/1/testing-product/'
+            obj.get_absolute_url(), '/product/1/testing-product/'
         )
 
     def test_discount_method(self):
