@@ -25,14 +25,13 @@ class AnimalShopViewTestCase(TestCase):
         """
         cat_ins = Category.objects.all()
         prod_ins = Product.objects.all().order_by('-updated')
-
         response = self.client.get(reverse('animalshop:animalshop-LP'))
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Views Product5')
         self.assertContains(response, 'Views Category')
         self.assertQuerysetEqual(response.context['categories'], cat_ins)
-        self.assertQuerysetEqual(response.context['products'], prod_ins)
+        self.assertQuerysetEqual(response.context['products'], prod_ins[:6])
         self.assertTemplateUsed(response, 'animalshop/landing_page.html')
 
     def test_index_view_with_no_data(self):
