@@ -1,11 +1,14 @@
 from django.db import models
 from django.http import Http404
 from django.urls import reverse
+from django.contrib.postgres.fields import ArrayField
 
 
 class Category(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     about = models.TextField(blank=True, null=True)
+    _image = models.ImageField(
+        upload_to='category_images/%Y/%m/%d', blank=True, null=True)
     slug = models.SlugField(max_length=200, unique=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -29,6 +32,14 @@ class Category(models.Model):
         query = self.category_prod.all()
         return query
 
+    @property
+    def image(self) -> str:
+        try:
+            url = self._image.url
+        except:
+            url = ''
+        return url
+
 
 class Product(models.Model):
     category = models.ForeignKey(
@@ -38,8 +49,14 @@ class Product(models.Model):
     slug = models.SlugField(max_length=200, blank=False,
                             null=False, db_index=True)
     description = models.TextField(blank=True, null=True)
+    keywords = ArrayField(models.CharField(
+        max_length=300, blank=True, null=True), default=list)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    _image = models.ImageField(upload_to='prod_images/%Y/%m/%d', blank=True)
+    _image = models.ImageField(
+        upload_to='prod_images/%Y/%m/%d', blank=True, null=True)
+    gallery = ArrayField(models.ImageField(
+        upload_to='gallery/%Y/%m/%d', blank=True, null=True),
+        default=list)
     in_stock = models.BooleanField(default=True)
     shipping = models.BooleanField(default=False)
     _discount = models.DecimalField(max_digits=10, decimal_places=2)
