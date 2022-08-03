@@ -4,7 +4,6 @@ let homeLink = document.querySelector('.home_link');
 let featuredLink = document.querySelector('.featured_link');
 let landingHero = document.querySelector('.landing_hero');
 
-
 shopLink.onmouseover = () => {
     dropDown.classList.add('active');
 }

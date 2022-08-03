@@ -1,1 +1,101 @@
-{{ product.name }}
+{% extends "main.html" %}
+{% load static %}
+
+ 
+{% block title %} {{ request.get_host }} | ProductPage {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+    <main class="product_page_landing_hero">
+        <section class="first_section">
+            <figure>
+                <img src="{{ product.image }}" alt="" class="product_image product_image_one">
+
+                <div class="other_product_image">
+                    <img src="../asset/dog2.jpg" alt="" class="product_image_two sub_img">
+                    <img src="../asset/dog3.jpg" alt="" class="product_image_three sub_img">
+                    <img src="../asset/dog4.jpg" alt="" class="product_image_four sub_img">
+                    <img src="../asset/dog5.jpg" alt="" class="product_image_five sub_img">
+                    <img src="../asset/dog3.jpg" alt="" class="product_image_three sub_img">
+                    <img src="../asset/dog4.jpg" alt="" class="product_image_four sub_img">
+                    <img src="../asset/dog5.jpg" alt="" class="product_image_five sub_img">
+                </div>
+            </figure>
+
+
+        </section>
+
+        <section class="second_section">
+            <h4 class="petstore_header">PETSTORE</h4>
+            <h1 class="product_header_name">{{ product.name }}</h1>
+            <div class="product_price">${{ product.price }}</div>
+            <div class="shipping_note">Taxes and <a>shipping</a> calculated at checkout</div>
+            <form method='POST' >
+                {% csrf_token %}
+                <div class="product_quantity" for="id_quantity">{{ cartform.quantity.label }} 
+                <input type="number" name="quantity" id="id_quantity" class="product_quantity_input"/>
+                </div>
+                <input type="submit" value="Add to Cart" class="btn add_to_cart_button">
+                <input type="button" value="Buy it now" class="btn buy_it_now_button">
+            </form>
+            
+            <div class="product_description">
+            <p> {{ product.description }}</p>
+                <ul>
+                    <li>PETKIT stainless steel automatic pet water fountain with wireless pump (with power line)</li>
+                    <li>61 oz/1.8L</li>
+                    <li>195*195*148 mm</li>
+                    <li>The innovative wireless pump is designed with a hassle-free structure, extremely safe, and easy to clean when topping up water. 
+                        It cancels any exposed wires to eliminate electrical leakage.</li>
+                    <li>Easy to clean due to the wireless design. The wireless water pump and the main unit can be washed separately.</li>
+                    <li>PETKIT stainless steel automatic pet water fountain with wireless pump (with power line)</li>
+                    <li>61 oz/1.8L</li>
+                    <li>195*195*148 mm</li>
+                    <li>The innovative wireless pump is designed with a hassle-free structure, extremely safe, and easy to clean when topping up water. 
+                        It cancels any exposed wires to eliminate electrical leakage.</li>
+                    <li>Easy to clean due to the wireless design. The wireless water pump and the main unit can be washed separately.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="third_section">
+            <h2 class="third_section_header">You may like</h2>
+            <div class="card_div">
+                <div class="card">
+                    <figure><img src="../asset/dog18.jpg" alt=""></figure>
+                    <div class="card_wrapper">
+                        <p class="item_title">Bull Dog</p>
+                        <div class="item_price">$540</div>
+                        <!-- <button class="add_to_cart_button">Add to Cart</button> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <figure><img src="../asset/dog19.jpg" alt=""></figure>
+                    <div class="card_wrapper">
+                        <p class="item_title">Bull Dog</p>
+                        <div class="item_price">$540</div>
+                        <!-- <button class="add_to_cart_button">Add to Cart</button> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <figure><img src="../asset/dog19.jpg" alt=""></figure>
+                    <div class="card_wrapper">
+                        <p class="item_title">Bull Dog</p>
+                        <div class="item_price">$540</div>
+                        <!-- <button class="add_to_cart_button">Add to Cart</button> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'js/detail.js' %}" defer ></script>
+{% endblock js %}

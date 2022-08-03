@@ -1,14 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>category list</title>
-</head>
-<body>
-<h1>{{ category }}</h1>
-{% for prod in category.get_products  %}
-{{ prod }}
-{% endfor %}
-</body>
-</html>
+{% extends "main.html" %}
+{% load static %}
+
+
+{% block title %} {{ request.get_host }} | {{ category.name }} Page {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/categorylist.css' %}">
+{% endblock css %}
+
+{% block content %}
+<main class="feature_page_landing_hero">
+    <section class="feature_section">
+        <h2 class="feature_section_header">{{ category.name }}</h2>
+        <div class="card_div">
+        {% for prod in category.get_products  %}
+            <div class="card">
+                <a href='{{ prod.get_absolute_url }}'>
+                <figure><img src="{{ prod.image }}" alt="{{ prod.name }}"></figure>
+                </a>
+                <div class="card_wrapper">
+                    <p class="item_title">{{ prod.name }}</p>
+                    <div class="item_price">${{ prod.price }}</div>
+                </div>
+            </div>
+        {% empty %}
+        <div class="card">
+            <h1>Opps! Product is not yet added :)</h1>
+        </div>
+        {% endfor%}
+        <div>
+    </section>
+</main>
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'js/categorylist.js' %}" defer ></script>
+{% endblock js %}

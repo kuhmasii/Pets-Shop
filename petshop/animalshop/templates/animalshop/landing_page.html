@@ -1,14 +1,13 @@
 {% extends "main.html" %}
 {% load static %}
 
+{% block title %} {{ request.get_host }} {% endblock title %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
 {% endblock css %}
 
-{% block js %}
-<script src="{% static 'js/landing_page.js' %}" defer></script>
-{% endblock js %}
+
 
 {% block content %}
 <main class="landing_hero">
@@ -21,24 +20,22 @@
             </a>
         </div>
 
-        <figure>
+        <figure class="right_container">
             <img src="{% static '/asset/dog23.jpg' %}" alt="">
         </figure>
     </section>
 
     <section class="second_section">
-
-        <div class="card_div">
+        <div class="card_div third_card_div">
         {% for category in categories %}
             <div class="card">
-                <figure>
-                <img src="{% static '/asset/dog1.jpg' %}" alt="{{ category.name }}">
-                </figure>
+                <a style='background: url({{ category.image }}) center center no-repeat;' 
+                href="{% url 'animalshop:animalshop-CL' category.id category.slug  %}" class="clean_link clean_cat_text">{{ category.name }}</a>
             </div>
         {% empty %}
-        <div class="card">
-            <p>Opps! No Categories for Products yet(:</p>
-        </div>
+            <div class="card">
+                <h1>Opps! No Categories for Products yet(:</h1>
+            </div>
         {% endfor %}
         </div>
     </section>
@@ -49,16 +46,19 @@
         <div class="card_div">
         {% for product in products %}
             <div class="card">
-                <figure><img src="{{ product.image }}" alt="{{ product.name }}"></figure>
+                <figure>
+                <a href='{{ product.get_absolute_url }}'>
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+                </a>
+                </figure>
                 <div class="card_wrapper">
                     <p class="item_title">{{ product.name }}</p>
                     <div class="item_price">${{ product.price }}</div>
-                    <button class="add_to_cart_button">Add to Cart</button>
                 </div>
             </div>
         {% empty %}
             <div class="card">
-                <p>Opps! No Products Available yet(:</p>
+                <h1>Opps! No Products Available yet(:</h1>
             </div>
         {% endfor %}
         </div>
@@ -74,4 +74,10 @@
     </section>
 </main>
 {% endblock content %}
+
+
+{% block js %}
+<script src="{% static 'js/landing_page.js' %}" defer></script>
+{% endblock js %}
+
 

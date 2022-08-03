@@ -4,15 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pet Store</title>
 
         <!-- font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- custom css file link -->
+        <title>{% block title %}{% endblock title %}</title>
+
         {% block css %}{% endblock css%}
 
-        {% block js %}{% endblock js %}
-    </head>
+    
     <body>
             <section class="info_header">
                 <p class="info_header_text">PURA MAX+Refill Bottles (4 bottles)+Trash Bags(4) (restocked!) / FREE 30 DAYS RETURN</p>
@@ -20,21 +20,31 @@
 
             <header class="landing_header_section">
                 <div class="landing_logo">PETSTORE</div>
-
+    
                 <nav class="landing-navbar">
-                    <a href="{% url 'animalshop:animalshop-LP' %}">Home</a>
-                    <a href="#">Shop</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="{% url 'animalshop:animalshop-LP' %}" class="home_link">Home</a>
+                    <a href="{% url 'animalshop:animalshop-list' %}" class="shop_link">Shop</a>
+                    <a href="#" class="featured_link">Featured</a>
+                    <a href="#" class="about_link">About</a>
                 </nav>
-                {% include 'context_proc.html' %}
-                
+    
                 <div class="landing_header_icon">
-                    <img src="#" alt="">
-                    <img src="#" alt="">
-                    <img src="#" alt="">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-shopping-cart"></i>
                 </div>
             </header>
+    
+
+            <div class="drop_down">
+                <ul>
+                    <li><a href="" class="clean_link">Clean</a></li>
+                    <li><a href="" class="feed_link">Feed</a></li>
+                    <li><a href="" class="housing_link">Housing</a></li>
+                    <li><a href="" class="pet_link">Pets</a></li>
+                    <li><a href="" class="services_link">Services</a></li>
+                </ul>
+            </div>
 
 
             {% block content %}
@@ -86,7 +96,10 @@
                         <p>&copy;2022, PETSTORE NG</p>
                     </div>
                 </div>
-            </footer>
+                
 
+
+            </footer>
+        {% block js %}{% endblock js %}
     </body>
 </html>

@@ -1,13 +1,13 @@
 {% extends "main.html" %}
 {% load static %}
 
+
+{% block title %} {{ request.get_host }} | ShopPage {% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/shop_page.css' %}">
 {% endblock css %}
 
-{% block js %}
-<script src="{% static 'js/shop_page.js' %}" defer ></script>
-{% endblock js %}
 
 {% block content %}
 <main class="shop_page_landing_hero">
@@ -20,11 +20,13 @@
         <div class="card_div">
             {% for product in products %}
             <div class="card">
-                <figure><img src="{{ product.image }}" alt=""></figure>
+                <figure>
+                <a href='{{ product.get_absolute_url }}'>
+                <img src="{{ product.image }}" alt=""></a>
+                </figure>
                 <div class="card_wrapper">
                     <p class="item_title">{{ product.name }}</p>
                     <div class="item_price">${{ product.price }}</div>
-                    <button class="add_to_cart_button">Add to Cart</button>
                 </div>
             </div>
             {% empty %}
@@ -44,3 +46,7 @@
     </section>
 </main>
 {% endblock content %}
+
+{% block js %}
+<script src="{% static 'js/shop_page.js' %}" defer ></script>
+{% endblock js %}
