@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0, .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+
+.info_header {
+    background-color: black;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.info_header_text {
+    color: rgba(199, 199, 199, 0.8);
+    font-size: 17px;
+    margin-left: 368px;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+header {
+    display: flex;
+    background-color: #fff;
+    height: 90px;
+    justify-content: space-between;
+    /* background-color: rgb(218, 215, 215); */
+    background-color: var(--black);
+}
+
+header .landing_logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 1000;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 100px;
+}
+
+header .landing-navbar {
+    color: #fff;
+    font-size: 23px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+
+}
+
+header .landing-navbar a {
+    /* color: rgb(32, 32, 32); */
+    color: #fff;
+    text-transform: capitalize;
+}
+
+header .landing-navbar a:hover {
+    letter-spacing: .1rem;
+}
+
+header .landing_header_icon {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+    /* background-color: #000000; */
+    margin-right: 80px;
+}
+
+header .landing_header_icon i {
+    margin-right: 30px;
+}
+
+header .landing_header_icon i:hover {
+    letter-spacing: .1rem;
+}
+
+
+
+
+.drop_down{
+    /* width: 90px; */
+    background-color: var(--black);
+    color: #fff;
+    left: 565px;
+    position: absolute;
+    display: none;
+}
+
+.drop_down.active {
+    display: inline-block;
+}
+
+.drop_down ul {
+    text-decoration: none;
+}
+
+.drop_down ul li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+    padding: 0px 10px;
+}
+
+.drop_down ul li:hover {
+    letter-spacing: .1rem;
+}
+
+.drop_down ul li a {
+    color: #fff;
+}
+
+.drop_down ul li a:hover {
+    color: red;
+}
+
+.product_page_landing_hero {
+    background-color: #fff;
+    /* display: flex; */
+    padding-top: 150px;
+}
+
+.product_page_landing_hero .first_section {
+    width: 750px;
+    float: left;
+}
+
+.product_page_landing_hero .first_section figure {
+    margin-left: 170px;
+}
+
+.product_page_landing_hero .first_section figure .product_image {
+    width: 550px;
+    height: 650px;
+}
+
+.product_page_landing_hero .first_section figure .other_product_image {
+    margin-top: 20px;
+}
+
+.product_page_landing_hero .first_section figure .other_product_image .sub_img {
+    width: 122px;
+    height: 120px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.product_page_landing_hero .first_section figure .other_product_image .sub_img:hover {
+    width: 125px;
+}
+
+.product_page_landing_hero .second_section {
+    float: left;
+    margin-left: 10px;
+    width: 400px;
+}
+
+.product_page_landing_hero .second_section .petstore_header {
+    margin-top: 90px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 150px;
+}
+
+.product_page_landing_hero .second_section .product_header_name {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.product_page_landing_hero .second_section .product_price {
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 160px;
+}
+
+.product_page_landing_hero .second_section .shipping_note {
+    font-size: 13px;
+    clear: both;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.product_page_landing_hero .second_section .shipping_note a {
+    color: red;
+}
+
+.product_page_landing_hero .second_section .product_quantity {
+    font-size: 15px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.product_page_landing_hero .second_section .product_quantity .product_quantity_input {
+    width: 250px;
+    height: 38px;
+    margin-left: 10px;
+    background-color: rgb(216, 216, 216);
+}
+
+
+.product_page_landing_hero .second_section .btn {
+    width: 400px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 900;
+    margin-top: 10px;
+} 
+
+.product_page_landing_hero .second_section .btn:hover {
+    letter-spacing: .1rem;
+}
+
+.product_page_landing_hero .second_section .add_to_cart_button {
+    background-color: var(--black);
+    color: #fff;
+
+}
+
+.product_page_landing_hero .second_section .buy_it_now_button {
+    background-color: black;
+    color: #fff;
+}
+
+.product_page_landing_hero .second_section .product_description {
+    margin-top: 80px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+
+.third_section {
+    width: 100%;
+    display: block;
+    padding-top: 40px;
+    clear: both;
+}
+
+.third_section .third_section_header {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 70px;
+}
+
+/* .shop_section .shop_section_sub_header {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+} */
+
+.third_section .card_div {
+    width: 1100px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third_section .card_div .card {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 50px;
+    /* background-color: rgb(218, 215, 215); */
+}
+
+.third_section .card_div .card figure img {
+    width: 300px;
+    height: 250px;
+}
+
+.third_section .card_div .card figure img:hover {
+    width: 310px;
+}
+
+.third_section .card_div .card .card_wrapper {
+    display: block;
+    padding-left: 10px;
+    
+}
+
+.third_section .card_div .card .card_wrapper .item_title {
+    display: block;
+    /* clear: both; */
+    float: left;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.third_section .card_div .card .card_wrapper .item_price {
+    float: left;
+    font-size: 20px;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+
+.third_section .card_div .card .card_wrapper .add_to_cart_button {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--black);
+    /* height: 40px;
+    width: 120px; */
+    padding: 12px 20px;
+    margin-left: 80px;
+}
+
+.third_section .card_div .card .card_wrapper .add_to_cart_button:hover {
+    letter-spacing: .1rem;
+}
+
+.footer_section {
+    width: 100%;
+    display: inline-block;
+    background-color: var(--black);
+    color: #fff;
+    margin-top: 40px;
+    text-decoration: none;
+    padding-top: 150px;
+    padding-bottom: 140px;
+}
+
+.footer_section .first_footer_card,.second_footer_card,.third_footer_card,.fourth_footer_card {
+    float: left;
+    margin-left: 190px;
+    font-size: 15px;
+}
+
+.footer_section .first_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer_section .second_footer_card a{
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer_section .third_footer_card .socials{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_section .third_section .socials .social_icon,.social_text {
+    float: left;
+}
+
+@media screen and (min-width: 1450px) {
+
+    .drop_down {
+        left: 625px;
+    }
+   
+}
