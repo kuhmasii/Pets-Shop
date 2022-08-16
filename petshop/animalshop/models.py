@@ -23,14 +23,14 @@ class Category(models.Model):
 
     def get_prod(self, id):
         try:
-            queryset = self.category_prod.get(id=id)
+            queryset_ = self.category_prod.get(id=id)
         except self.DoesNotExist:
             raise Http404
-        return queryset
+        return queryset_
 
     def get_products(self):
-        query = self.category_prod.all()
-        return query
+        query_ = self.category_prod.all()
+        return query_
 
     @property
     def image(self) -> str:
@@ -50,13 +50,12 @@ class Product(models.Model):
                             null=False, db_index=True)
     description = models.TextField(blank=True, null=True)
     keywords = ArrayField(models.CharField(
-        max_length=300, blank=True, null=True), default=list)
+        max_length=300), default=list, blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     _image = models.ImageField(
         upload_to='prod_images/%Y/%m/%d', blank=True, null=True)
     gallery = ArrayField(models.ImageField(
-        upload_to='gallery/%Y/%m/%d', blank=True, null=True),
-        default=list)
+        upload_to='gallery/%Y/%m/%d'), blank=True, null=True, default=list)
     in_stock = models.BooleanField(default=True)
     shipping = models.BooleanField(default=False)
     _discount = models.DecimalField(max_digits=10, decimal_places=2)
